@@ -1,7 +1,7 @@
 
 select 	dloc.DNumber, 
 		dept1.DName, 
-        count(dloc.Dnumber) 
+        count(dloc.Dnumber) num_location
 from DEPT_LOCATIONS dloc
 inner join 
 (

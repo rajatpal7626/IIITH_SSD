@@ -1,8 +1,7 @@
 
-select 	dept.dnumber, 
-		dept.dname, 
-        manager.Manager_name, 
-        manager.Manager_Ssn , 
+select 	manager.Manager_name, 
+		manager.Manager_Ssn , 
+		dept.dnumber, 
         manager.Num_of_employee 
 from DEPARTMENT dept
 inner join 
