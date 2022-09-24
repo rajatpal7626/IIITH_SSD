@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HTML Assignment</title>
+    <script>
+      
+      let i=0;
+      function addStudent() {
+        var x = document.getElementById("roll-number").value;
+        var y = document.getElementById("name").value;
+        
+        document.getElementById("roll-number").value='';
+        document.getElementById("name").value='';
+
+        let objectInput = {
+          rollnumber: x,
+          stuname: y,
+        };
+       
+        studentsAdd.innerHTML += `
+
+          <tr id="rowid-${i++}">
+            <td>${objectInput.rollnumber}</td>
+            <td data-column="First Name">${objectInput.stuname}</td>
+          </tr>
+          `;
+      }
+      
+      function lastStudentDelete() {
+        i--;
+        var row = document.getElementById("rowid-"+i);
+    	row.parentNode.removeChild(row);
+      }
+   </script>
+  
+  </head>
+  <body>
+    <div class="fullscreen-table-container">
+      <h1 class="header">Student Records</h1>
+      <div class="add-row">
+        <input
+          type="number"
+          name=""
+          id="roll-number"
+          placeholder="Roll Number"
+        />
+        <input type="text" name="" id="name" placeholder="Name" />
+        <button class="add-new" onclick="addStudent()">Add New</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Roll .No</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody id="studentsAdd">
+          
+        </tbody>
+      </table>
+
+      <div>
+        <button class="btn-delete"  onclick="lastStudentDelete()">Delete Last Entry</button>
+      </div>
+    </div>
+  </body>
+</html>

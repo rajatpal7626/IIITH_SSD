@@ -1,0 +1,243 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+/* resuse css */
+.r-col-md-3, .r-col-md-4, .r-col-md-8{
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.r-form-group {
+  margin-bottom: 1rem;
+}
+.r-form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.r-form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.r-form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.r-form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.r-form-control::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.r-form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.r-form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.r-form-control::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.r-form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.r-form-control:disabled,
+.r-form-control[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+select.r-form-control:not([size]):not([multiple]) {
+  height: calc(2.25rem + 2px);
+}
+select.r-form-control:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .r-col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .r-col-md-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .r-col-md-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+
+.r-container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.r-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+label {
+  font-weight: bold;
+}
+.r-mb-2 {
+  margin-bottom: 15px;
+}
+.r-mb-4 {
+  margin-bottom: 30px;
+}
+.r-text-center {
+  text-align: center;
+}
+
+.box {
+  list-style: none;
+  min-height: 250px;
+  border: 1px solid #000;
+  padding: 15px;
+}
+.box li {
+  background-color: #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.box2  li{
+  background-color: #80bdff;
+  color: #000;
+}
+button.btn-submit {
+  background: #589358;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+}
+
+/* toggle button css */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.dark-mode {
+  background-color: #000;
+  color:#fff;
+}
+.dark-mode input, .dark-mode select , .dark-mode ul li {
+  border: 1px solid #ccc;
+  background: #fff;
+}
+.dark-mode .box2 li {
+  background-color: #80bdff;
+}
+.dark-mode ul  {
+  border: 1px solid #ccc;
+}
+.error {
+  color:red;
+  text-transform: capitalize;
+}
+
+.rdflex{
+display:flex;
+}

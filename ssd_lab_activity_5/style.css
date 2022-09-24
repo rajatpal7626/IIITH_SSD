@@ -1,0 +1,231 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.fullscreen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(53deg, rgba(25,191,203,1) 6%, rgba(188,81,218,1) 61%);
+
+}
+.fullscreen-table-container {
+    padding: 15px;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #e4e3e3;
+}
+.login-container {
+  width: 50%;
+  max-width: 400px;
+  padding: 50px 25px 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+.header {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: .8rem;
+}
+
+.input-group input {
+  font-size: .9rem;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid hsl(0, 0%, 83%);
+}
+.input-group input:hover {
+    border-bottom: 1px solid red;
+}
+.input-group input:focus {
+  box-shadow: 0 0 0 1px hsl(178, 100%, 50%);
+  border-bottom: 2px solid hsl(0, 0%, 83%, 0%);
+}
+
+.login-button {
+  margin: 0 AUTO;
+  background: #979494;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.button:focus {
+  box-shadow: 0 0 0 1px hsl(178, 100%, 50%);
+}
+
+.signup-header {
+  text-align: center;
+  font-weight: 200;
+  font-size: .9rem;
+  margin-top: 75px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-links {
+  text-decoration: none;
+}
+
+.fa-brands {
+  font-size: 1.75rem;
+}
+
+.fa-facebook {
+  border-radius: 50%;
+  background: white;
+  color: #435892;
+}
+
+.fa-twitter {
+  border-radius: 50%;
+  padding: px;
+  color: #4AA0E8;
+  background-color: white;
+}
+
+.fa-google {
+  color: #D64E44;
+}
+
+/* css for table */
+table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #3498db; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+        padding: 5px;
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+    
+}
+
+.btn-delete {
+    color:#fff;
+    background-color: red !important;
+    margin: 0 auto;
+    padding:10px 20px;
+    font-size: 14px;
+    display: block;
+    border: none;
+}
+.add-new {
+    background-color: green;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+.add-row {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.add-row input {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <title>HTML Assignment 2</title>
+  </head>
+  <body>
+    <div class="r-container-fluid">
+      <header>
+        <h1 class="r-text-center">Team Form</h1>
+        <div class="r-mb-2">
+          <h2>Change Mode Dark to Light and Light to Dark</h2>
+          <label class="switch">
+            <input  type="checkbox">
+            <span onclick="toggleMode()" class="slider round"></span>
+          </label>
+        </div>
+      </header>
+     
+      <section>
+        <form name="rform" onsubmit="FormSubmit(event)">
+          <div class="r-row r-mb-2">
+            <div class="r-col-md-3">
+              <label for="">Manager Name</label>
+            </div>
+            <div class="r-col-md-4">
+              <input type="text" name="mname" class="r-form-control" onblur="validateManagerName()"/>
+              <span class="error" id="mnameerror" ></span>
+            </div>
+          </div>
+          <div class="r-row r-mb-2">
+            <div class="r-col-md-3">
+              <label for="">Group Email</label>
+            </div>
+            <div class="r-col-md-4">
+              <input type="text" name="groupmail" class="r-form-control" onblur="validateEmail()"/>
+              <span class="error" id="mailerror" ></span>
+            </div>
+          </div>
+          <div class="r-row r-mb-2">
+            <div class="r-col-md-3">
+              <label for="">Server Username</label>
+            </div>
+            <div class="r-col-md-4 rdflex">
+              <input type="text" name="uname" class="r-form-control" onkeyup="validateUName()" />
+               <span class="error" id="unameerror" ></span>
+            </div>
+          </div>
+          <div class="r-row r-mb-2">
+            <div class="r-col-md-3">
+              <label for="">Password</label>
+            </div>
+            <div class="r-col-md-4">
+              <input type="password" name="pswd" class="r-form-control" onblur="validatePassword()"/>
+              <span class="error" id="pswderror" ></span>
+            </div>
+          </div>
+          <div class="r-row r-mb-2">
+            <div class="r-col-md-3">
+              <label for="">Confirm Password</label>
+            </div>
+            <div class="r-col-md-4">
+              <input type="password" name="cpswd" class="r-form-control" onblur="validatePassword()" />
+              <span class="error" id="mismatcherror" ></span>
+            </div>
+          </div>
+          <div class="r-row r-mb-2">
+            <div class="r-col-md-3">
+              <label for="">Team Lead</label>
+            </div>
+            <div class="r-col-md-4">
+              <select name="teamlead" id="" class="r-form-control">
+                <option value="" selected>Rajat</option>
+                <option value="">Vijay</option>
+              </select>
+            </div>
+          </div>
+          <div class="r-row r-mb-2">
+            <div class="r-col-md-3">
+              <label for="">Team Memeber</label>
+            </div>
+            <div class="r-col-md-3">
+              <ul class="box" id="div0" ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="drag(event)">
+                <li id="drag1"  draggable="true">
+                  Tony
+                </li>
+                <li id="drag2"  draggable="true">
+                  Steve
+                </li>
+                <li id="drag3"  draggable="true">
+                  Bunch
+                </li>
+                <li id="drag4"  draggable="true">
+                  Natasa
+                </li>
+                <li id="drag5"  draggable="true">
+                  Rajat
+                </li>
+                <li id="drag6" draggable="true">
+                  Prashant
+                </li>
+              </ul>
+            </div>
+            <div class="r-col-md-3">
+              <ul class="box box2" id="div1" ondrop="drop(event)"  ondragover="allowDrop(event)" ondragstart="drag(event)"></ul>
+            </div>
+          </div>
+          <div class="r-row r-mb-2">
+            <div class="r-col-md-3">
+              <button type="submit" class="btn-submit">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
